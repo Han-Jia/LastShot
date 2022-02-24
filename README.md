@@ -13,8 +13,6 @@ This is the repository for "Few-Shot Learning with a Strong Teacher" [[ArXiv]](h
         year      = {2021}
     }
 
-The full commands and checkpoints will be released soon.
-
 ## LastShot
 
 Few-shot learning (FSL) aims to train a strong classifier using limited labeled examples. Many existing works take the meta-learning approach, sampling few-shot tasks in turn and optimizing the few-shot learner's performance on classifying the query examples. In this paper, we point out two potential weaknesses of this approach. First, the sampled query examples may not provide sufficient supervision for the few-shot learner. Second, the effectiveness of meta-learning diminishes sharply with increasing shots (i.e., the number of training examples per class). To resolve these issues, we propose a novel objective to directly train the few-shot learner to perform like a strong classifier. Concretely, we associate each sampled few-shot task with a strong classifier, which is learned with ample labeled examples. The strong classifier has a better generalization ability and we use it to supervise the few-shot learner. We present an efficient way to construct the strong classifier, making our proposed objective an easily plug-and-play term to existing meta-learning based FSL methods. We validate our approach in combinations with many representative meta-learning methods. On several benchmark datasets including miniImageNet and tiredImageNet, our approach leads to a notable improvement across a variety of tasks. More importantly, with our approach, meta-learning based FSL methods can consistently outperform non-meta-learning based ones, even in a many-shot setting, greatly strengthening their applicability.
@@ -25,7 +23,7 @@ Few-shot learning (FSL) aims to train a strong classifier using limited labeled 
 
 Experimental results on few-shot learning datasets with ResNet-12 backbone (Same as [this repo](https://github.com/kjunelee/MetaOptNet)). We report average results with 10,000 randomly sampled few-shot learning episodes for stablized evaluation.
 
-**MiniImageNet Dataset [Link to Weights]()**
+**MiniImageNet Dataset [Link to Weights](https://drive.google.com/drive/folders/1bQRu4_GIjPFDY4xjRCJgJLANigw_pSnq?usp=sharing)**
 |     Setups     | 1-Shot 5-Way | 5-Shot 5-Way | 10-Shot 5-Way | 20-Shot 5-Way | 30-Shot 5-Way | 50-Shot 5-Way |
 |:--------------:|:------------:|:------------:|:-------------:| :------------:| :------------:| :------------:|
 |    ProtoNet    |     63.73    |     79.40    |     82.83     |     84.61     |      85.07    |      85.57    |
