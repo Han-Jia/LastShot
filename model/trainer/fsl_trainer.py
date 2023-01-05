@@ -67,7 +67,7 @@ class FSLTrainer(Trainer):
                     RepoInit[c_label]['center'] = torch.mean(inst_emb, 0)
             
                 torch.save(RepoInit, osp.join(*args.repo_init.split('/')[:-1], 'RepoInit-{}.dat'.format(args.backbone_class_t)))        
-                self.model.train  
+                self.model.train()
                 
     def prepare_label(self):
         args = self.args
